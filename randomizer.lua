@@ -16,7 +16,7 @@ else
             local ball = Instance.new("Part")
             ball.Shape = Enum.PartType.Ball
             ball.Size = Vector3.new(2, 2, 2)
-            ball.Color = Color3.new(1, 0, 0)
+            ball.Color = Color3.new(1, 0, 0) -- this is real
             ball.Position = character.Head.Position + character.Head.CFrame.LookVector * 5
 
             ball.Parent = game.Workspace
