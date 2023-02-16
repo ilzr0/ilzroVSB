@@ -15,7 +15,7 @@ if head then
         print("e")
         local random = math.random(1,1)
         if random == 1 then
-            ball.Color = Color3.new(144, 25, 255)
+            ball.Color = Color3.new(144,25,255)
             local effect = Instance.new("Sparkles")
             effect.Parent = ball
         end
