@@ -12,7 +12,7 @@ if head then
     local clickDetector = Instance.new("ClickDetector")
     clickDetector.Parent = ball
     clickDetector.MouseClick:Connect(function()
-        print("e")
+        print("cap")
         local random = math.random(1,1)
         if random == 1 then
             ball.Color = Color3.new(144,25,255)
