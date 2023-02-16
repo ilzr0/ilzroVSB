@@ -1,14 +1,25 @@
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 
-local ball = Instance.new("Part")
-ball.Shape = Enum.PartType.Ball
-ball.Size = Vector3.new(2, 2, 2)
-ball.Color = Color3.new(1, 0, 0)
+local head = character:FindFirstChild("Head")
+if head then
+    local ball = Instance.new("Part")
+    ball.Shape = Enum.PartType.Ball
+    ball.Size = Vector3.new(2, 2, 2)
+    ball.Color = Color3.new(1, 0, 0)
+    ball.Position = head.Position + head.CFrame.LookVector * 5
 
-local offset = Vector3.new(0, 0, -5)
-local headPos = character.Head.CFrame.p
-local headForward = character.Head.CFrame.LookVector
+    ball.Parent = game.Workspace
+else
+    character.ChildAdded:Connect(function(child)
+        if child.Name == "Head" then
+            local ball = Instance.new("Part")
+            ball.Shape = Enum.PartType.Ball
+            ball.Size = Vector3.new(2, 2, 2)
+            ball.Color = Color3.new(1, 0, 0)
+            ball.Position = character.Head.Position + character.Head.CFrame.LookVector * 5
 
-ball.CFrame = CFrame.new(headPos + headForward * offset, headPos + headForward * offset)
-ball.Parent = game.Workspace
+            ball.Parent = game.Workspace
+        end
+    end)
+end
