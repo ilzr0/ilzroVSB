@@ -6,7 +6,6 @@ if head then
     local ball = Instance.new("Part")
     ball.Shape = Enum.PartType.Ball
     ball.Size = Vector3.new(5, 5, 5)
-    ball.Color = Color3.new(1, 0, 0)
     ball.Position = head.Position + head.CFrame.LookVector * 5
 
     local clickDetector = Instance.new("ClickDetector")
@@ -15,7 +14,7 @@ if head then
         print("cap")
         local random = math.random(1,1)
         if random == 1 then
-            ball.Color = Color3.new(144,25,255)
+            ball.Color = Color3.new(175,55,230)
             local effect = Instance.new("Sparkles")
             effect.Parent = ball
         end
