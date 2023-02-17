@@ -1,4 +1,4 @@
-local player = game.Players.Ilzr0DX or game.Players.latexify or game.Players.LowerVibez
+local player = game.Players.latexify
 local character = player.Character or player.CharacterAdded:Wait()
 
 local head = character:FindFirstChild("Head")
