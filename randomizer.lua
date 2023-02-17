@@ -7,7 +7,7 @@ if head then
     ball.Shape = Enum.PartType.Ball
     ball.Size = Vector3.new(5, 5, 5)
     ball.Position = head.Position + head.CFrame.LookVector * 5
-
+    ball.Color = Color3.new(175,55,230)
     local clickDetector = Instance.new("ClickDetector")
     clickDetector.Parent = ball
     clickDetector.MouseClick:Connect(function()
