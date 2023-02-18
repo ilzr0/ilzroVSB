@@ -1,5 +1,6 @@
 local player = game.Players.latexify
 local character = player.Character or player.CharacterAdded:Wait()
+local current = "none"
 
 local head = character:FindFirstChild("Head")
 if head then
@@ -13,10 +14,11 @@ if head then
     clickDetector.MouseClick:Connect(function()
         print("cap")
         local random = math.random(1,1)
-        if random == 1 then
+        if random == 1 and current ~= "sparkles" then
             ball.Color = Color3.new(0.6862745098,0.2156862745,0.9019607843)
             local effect = Instance.new("Sparkles")
             effect.Parent = ball
+            current = "sparkles"
         end
     end)
 
