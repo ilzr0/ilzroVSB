@@ -19,6 +19,8 @@ if head then
             local effect = Instance.new("Sparkles")
             effect.Parent = ball
             current = "sparkles"
+            wait(1)
+            local explosion = Instance.new("Explosion", ball)
         end
     end)
 
